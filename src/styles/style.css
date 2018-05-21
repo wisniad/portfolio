@@ -1,0 +1,107 @@
+h1 {
+    font-size: 4rem;
+        /*font-size: 7.9vw;*/
+    letter-spacing: -2px;
+    /*line-height: 110%;*/
+    /*font-family: Semibold;*/
+
+}
+/*!*.nameSurname {*!*/
+    /*!*position: fixed;*!*/
+    /*!*top: 20%;*!*/
+    /*!*left: 10%*!*/
+/*!*}*!*/
+
+/*.text {*/
+    /*position: relative;*/
+    /*display: block;*/
+    /*overflow: hidden*/
+/*}*/
+
+/*.animate {*/
+    /*-webkit-animation: animate 1.2s cubic-bezier(.2, .6, .2, 1);*/
+    /*-moz-animation: animate 1.2s cubic-bezier(.2, .6, .2, 1);*/
+    /*animation: animate 1.2s cubic-bezier(.2, .6, .2, 1);*/
+    /*-webkit-animation-fill-mode: backwards;*/
+    /*-moz-animation-fill-mode: backwards;*/
+    /*animation-fill-mode: backwards*/
+/*}*/
+
+/*.delay {*/
+    /*-webkit-animation-delay: .3s;*/
+    /*animation-delay: 0.3s;*/
+/*}*/
+
+/*.about {*/
+    /*position: absolute;*/
+    /*top: 100vh;*/
+    /*left: 50%;*/
+    /*right: 10%;*/
+    /*padding-bottom: 34vh*/
+/*}*/
+/*img {*/
+    /*width: auto;*/
+/*}*/
+/*.gallery {*/
+    /*transform: translate(35%, 0%);*/
+    /*border: 1px #f3e4d1 solid;*/
+/*}*/
+/*.gallery__text {*/
+
+/*}*/
+
+/*@media screen and (max-width: 1600px) {*/
+    /*.nameSurname {*/
+        /*left: 0;*/
+    /*}*/
+/*}*/
+/*@media screen and (max-width: 667px) {*/
+    /*h1 {*/
+        /*font-size: 3rem;*/
+    /*}*/
+    /*p {*/
+        /*font-size: 1.5rem;*/
+    /*}*/
+    /*!*.surname {*!*/
+        /*!*padding-top: 20%;*!*/
+    /*!*}*!*/
+
+    /*.about {*/
+        /*left: 0;*/
+        /*right: 0;*/
+        /*background: #fff;*/
+        /*padding: 10%*/
+    /*}*/
+/*}*/
+.margin {
+    margin: 3rem 2rem 3rem 2rem;
+}
+.divContainer__centered {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.divContainer__important {
+    padding-top: 3rem;
+
+}
+
+.content {
+    max-width: 1260px;
+    margin: auto;
+}
+
+@media screen and (max-width: 960px) {
+    .divContainer {
+        /*position: fixed;*/
+    }
+    .divContentCentered {
+        background-color: yellow;
+        /*margin: 0;*/
+        /*position: relative;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*margin-right: -50%;*/
+        /*transform: translate(-50%, -50%)*/
+    }
+}
