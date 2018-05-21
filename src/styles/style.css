@@ -1,5 +1,5 @@
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: -2px;
 }
 .margin {
@@ -10,12 +10,28 @@ h1 {
     align-items: center;
     justify-content: center
 }
-.divContainer__important {
-    padding-top: 3rem;
-
-}
+/*.divContainer__important {*/
+    /*padding-top: 1em;*/
+/*}*/
 
 .content {
     max-width: 1260px;
     margin: auto;
+}
+
+.gallery__item {
+    transition: all .2s ease-in-out;
+}
+.gallery__item:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+a, a:Visited {
+    text-decoration: none;
+    color: black;
+}
+
+.contact__informaton {
+    font-size: 1.2rem;
 }
