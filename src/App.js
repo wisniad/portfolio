@@ -42,18 +42,15 @@ class App extends Component {
                             <p>
                                 I'm constantly learning and improving my development skills.
                                 I’ve IT knowledge from studying programming and system development at University West in
-                                Sweden, furthermore I’ve completed Front-end developer bootcamp at InfoShare
-                                Academy.
+                                Sweden, furthermore I’ve completed Front-end developer bootcamp at InfoShare Academy.
                             </p>
                             <p>
-                                I have knowledge in React and I’m using Redux & React-router in application development.
-                                I’m very motivated and I’m constantly learning new things to improve my knowledge and
-                                skill-set.
+                                I have knowledge in <u>React</u> and I’m using <u>Redux</u> & <u>React-router</u> in application development.
+                                I’m very motivated and I’m constantly learning new things to improve my knowledge and skill-set.
                             </p>
                             <p>
                                 Over the course of my career, I have developed communication and problem-solving skills,
-                                which I
-                                hope to leverage into the Front-end developer role at your company.
+                                which I hope to leverage into the Front-end developer role at your company.
                             </p>
                             <p>
                                 I’ve used languages: <u>Polish</u>, <u>English</u> and <u>Swedish</u> in my previous
@@ -108,13 +105,12 @@ class App extends Component {
                         <h1>Contact information:</h1>
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
-                        <p className="contact__informaton">If you want to know more about my projects, please feel free
-                            to contact me.</p>
+                        <p className="contact__informaton">If you want to know more about my projects, please feel free to contact me.</p>
 
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
-                        <Grid container justify="space-around" alignItems="center">
-                            <Grid item xs={2} sm={2} md={2} lg={2} xl={2} className="divContainer__centered">
+                        <Grid container>
+                            <Grid item xs={6} className="divContainer__centered">
                                 <a href="https://linkedin.com/in/damian-wisniewski/">
                                     <h4>
                                         <FaLinkedin className="contact__item__padding"/>
@@ -122,7 +118,7 @@ class App extends Component {
                                     </h4>
                                 </a>
                             </Grid>
-                            <Grid item xs={2} sm={2} md={2} lg={2} xl={2} className="divContainer__centered">
+                            <Grid item xs={6} className="divContainer__centered">
                                 <a href="https://github.com/wisniad">
                                     <h4>
                                         <FaGithub className="contact__item__padding"/>
@@ -130,7 +126,7 @@ class App extends Component {
                                     </h4>
                                 </a>
                             </Grid>
-                            <Grid item xs={12} sm={12}  md={2} lg={2} xl={2} className="divContainer__centered">
+                            <Grid item xs={12} className="divContainer__centered">
                                 <a href="mailto:kontakt@wisniewskidamian.pl" target="_top">
                                     <h4>
                                         <MdMailOutline className="contact__item__padding"/>
