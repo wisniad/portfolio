@@ -9,6 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import withMobileDialog from '@material-ui/core/withMobileDialog';
 import ReactTooltip from 'react-tooltip'
 import Grid from '@material-ui/core/Grid';
+import FaClose from 'react-icons/lib/fa/close';
 
 class ResponsiveDialog extends React.Component {
     state = {
@@ -26,6 +27,7 @@ class ResponsiveDialog extends React.Component {
 
     render() {
         const {fullScreen} = this.props;
+        let closeImg = {cursor:'pointer', float:'right', marginTop: '0px', marginRight: '0px'};
 
         return (
             <div>
@@ -37,7 +39,7 @@ class ResponsiveDialog extends React.Component {
                 </a>
                 <ReactTooltip id='readMore' place="top" type="light"
                               effect="float">
-                    <p><strong>Click</strong> to read more about</p>
+                    <p><strong>Click</strong> to read more</p>
                 </ReactTooltip>
 
                 <Dialog
@@ -46,7 +48,15 @@ class ResponsiveDialog extends React.Component {
                     onClose={this.handleClose}
                     aria-labelledby="responsive-dialog-title"
                 >
-                    <DialogTitle id="responsive-dialog-title"><h3>{`Details about ${this.props.name}`}</h3></DialogTitle>
+                    <DialogTitle id="responsive-dialog-title">
+                        <div>
+                            <h3>{`Details about ${this.props.name}`}
+
+                            <FaClose onClick={this.handleClose} style={closeImg}/>
+
+                            </h3>
+                        </div>
+                    </DialogTitle>
                     <DialogContent>
                         <DialogContentText>
                             <Grid item xs={12} className="divContainer__centered">
@@ -60,9 +70,6 @@ class ResponsiveDialog extends React.Component {
                     <DialogActions>
                         <Button href={this.props.link} target="_blank" color="primary">
                             Open website
-                        </Button>
-                        <Button onClick={this.handleClose} color="primary" autoFocus>
-                            Close
                         </Button>
                     </DialogActions>
                 </Dialog>

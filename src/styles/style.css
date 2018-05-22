@@ -2,6 +2,10 @@ h1 {
     font-size: 3rem;
     letter-spacing: -2px;
 }
+
+img {
+    max-width: 300px;
+}
 .margin {
     margin: 3rem 2rem 3rem 2rem;
 }
@@ -17,6 +21,8 @@ h1 {
 .content {
     max-width: 1260px;
     margin: auto;
+    padding-top: 7%;
+    padding-bottom: 3%;
 }
 
 .gallery__item {
@@ -34,4 +40,20 @@ a, a:Visited {
 
 .contact__informaton {
     font-size: 1.2rem;
+}
+
+.section {
+    padding-top: 12%;
+}
+.section__intro {
+    height: 410px;
+}
+.contact__item__padding {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+@media screen and (max-width: 400px) {
+    Dialog {
+        max-width: 320px;
+    }
 }
