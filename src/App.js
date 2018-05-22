@@ -15,13 +15,18 @@ class App extends Component {
             <div className="content">
                 <Grid container justify="space-around" alignItems="center">
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <div className="">
+                        <div className="section__intro">
                             <Typist cursor={{show: false}}>
                                 <h1 className="divContainer__centered">Hi!<Typist.Delay ms={500}/></h1>
                                 <h2 className="divContainer__centered"> Welcome to my website.</h2>
-                                <h2 className="divContainer__centered">My name is:</h2>
-                                <Typist.Delay ms={500}/>
-                                <h1 className="divContainer__centered divContainer__important">Damian Wiśniewski</h1>
+                                <Typist.Delay ms={300}/>
+                                <div className="divContainer__centered ">
+                                    <h2>My name is:</h2>
+                                </div>
+                                <div className="divContainer__centered">
+                                    <Typist.Delay ms={150}/>
+                                    <h1>Damian Wiśniewski</h1>
+                                </div>
                             </Typist>
                         </div>
                     </Grid>
@@ -29,10 +34,9 @@ class App extends Component {
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <div>
                             <h2>
-                                I’m looking for the opportunity to work as a Frontend developer in
+                                I’m looking for the work opportunity as a Frontend developer in
                                 <a data-tip data-for='global'> Tricity</a>.</h2>
-                            <ReactTooltip id='global' place="top" type="light"
-                                          effect="float">
+                            <ReactTooltip id='global' place="top" type="light" effect="float">
                                 <p>Gdynia, Sopot, Gdańsk</p>
                             </ReactTooltip>
                             <p>
@@ -61,31 +65,23 @@ class App extends Component {
                         </div>
                     </Grid>
 
-                    <Grid item xs={12} sm={12}>
-                        <h2>My projects:</h2>
+                    <Grid item xs={12} sm={12} className="divContainer__centered section">
+                        <h1>My projects:</h1>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className="divContainer__centered">
-                            <div>
-                            <img src={require('./img/beerapp.jpeg')} alt="Beerapp thumbnail" className="gallery"/>
-                            <h3 className="divContainer__centered">Beer App</h3>
                             <ResponsiveDialog
                                 name="Beer app"
                                 picture={<img src={require('./img/beerapp.jpeg')} alt="Beer app thumbnail"/>}
-                                text="Hobby project to search for the best beers.
+                                text="Hobby project with aim to search for the best beers.
                                       Website created with ReactJS, Redux, React-Router.
                                       Data received from open API, layout made with Material UI"
                                 link="http://beer-find-app.herokuapp.com"
                             />
-                            </div>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className="divContainer__centered">
-                            <div>
-                            <img src={require('./img/dreamersapp.jpeg')} alt="Dreamers app thumbnail"
-                                 className="gallery"/>
-                            <h3 className="divContainer__centered">Dreamers App</h3>
                             <ResponsiveDialog
                                 name="Dreamers app"
                                 picture={<img src={require('./img/dreamersapp.jpeg')} alt="Dreamersapp thumbnail"/>}
@@ -94,44 +90,57 @@ class App extends Component {
                                       Website receives it's events from free API and the design is based on Bootstrap."
                                 link="http://app.dreamers.jfdz6.is-academy.pl"
                             />
-                            </div>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} lg={3} xl={3}>
                         <div className="divContainer__centered">
-                            <div>
-                            <img src={require('./img/noblespeakers.jpeg')} alt="Noble speakers thumbnail"
-                                 className="gallery"/>
-                            <h3 className="divContainer__centered">Noble Speakers</h3>
                             <ResponsiveDialog
                                 name="Noble Speakers Bureau"
-                                picture={<img src={require('./img/noblespeakers.jpeg')} alt="Noble speakers thumbnail"/>}
-                                text="Website created for the company Noble Speakers Bureau in which I worked.
-                                      I created layout and it's functionality.
-                                      Website functionality is created with JS with JQuery and pure PHP to receive data from SQL database.
-                                      No framework was used."
+                                picture={<img src={require('./img/noblespeakers.jpeg')}
+                                              alt="Noble speakers thumbnail"/>}
+                                text="Website created for the company Noble Speakers Bureau.
+                                      I created website's functionality with JS, JQuery and pure PHP to receive data from SQL database."
                                 link="https://www.noblespeakers.com/"
                             />
-                            </div>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6} lg={6} xl={6} className="divContainer__centered">
-                        <p>If you want to know more about my projects, please feel free to contact me.</p>
+                    <Grid item xs={12} className="divContainer__centered section">
+                        <h1>Contact information:</h1>
                     </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <Grid item xs={4} sm={4}>
-                            <p><FaLinkedin/>LinkedIn</p>
-                        </Grid>
-                        <Grid item xs={4} sm={4}>
-                            <p><FaGithub/>GitHub</p>
-                        </Grid>
-                        <Grid item xs={4} sm={4}>
-                            <p><MdMailOutline/>Email</p>
-                        </Grid>
+                    <Grid item xs={12} className="divContainer__centered">
+                        <p className="contact__informaton">If you want to know more about my projects, please feel free
+                            to contact me.</p>
 
+                    </Grid>
+                    <Grid item xs={12} className="divContainer__centered">
+                        <Grid container justify="space-around" alignItems="center">
+                            <Grid item xs={2} sm={2} md={2} lg={2} xl={2} className="divContainer__centered">
+                                <a href="https://linkedin.com/in/damian-wisniewski/">
+                                    <h4>
+                                        <FaLinkedin className="contact__item__padding"/>
+                                        LinkedIn
+                                    </h4>
+                                </a>
+                            </Grid>
+                            <Grid item xs={2} sm={2} md={2} lg={2} xl={2} className="divContainer__centered">
+                                <a href="https://github.com/wisniad">
+                                    <h4>
+                                        <FaGithub className="contact__item__padding"/>
+                                        GitHub
+                                    </h4>
+                                </a>
+                            </Grid>
+                            <Grid item xs={12} sm={12}  md={2} lg={2} xl={2} className="divContainer__centered">
+                                <a href="mailto:kontakt@wisniewskidamian.pl" target="_top">
+                                    <h4>
+                                        <MdMailOutline className="contact__item__padding"/>
+                                        kontakt@wisniewskidamian.pl
+                                    </h4>
+                                </a>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
-
             </div>
         );
     }
