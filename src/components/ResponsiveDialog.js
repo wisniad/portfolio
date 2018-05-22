@@ -46,26 +46,22 @@ class ResponsiveDialog extends React.Component {
                     fullScreen={fullScreen}
                     open={this.state.open}
                     onClose={this.handleClose}
-                    aria-labelledby="responsive-dialog-title"
                 >
-                    <DialogTitle id="responsive-dialog-title">
+                    <DialogTitle>
                         <div>
-                            <h3>{`Details about ${this.props.name}`}
-
-                            <FaClose onClick={this.handleClose} style={closeImg}/>
-
-                            </h3>
+                            <h3>{'Details about:'} <FaClose onClick={this.handleClose} style={closeImg}/> </h3>
+                            <h3>{this.props.name}</h3>
                         </div>
                     </DialogTitle>
                     <DialogContent>
-                        <DialogContentText>
-                            <Grid item xs={12} className="divContainer__centered">
+                        <Grid container justify="space-around" alignItems="center">
+                        <Grid item xs={12} className="divContainer__centered">
                                 <a href={this.props.link} target="_blank">{this.props.picture}</a>
                             </Grid>
                             <Grid item xs={12} className="divContainer__centered">
-                                {this.props.text}
+                                <DialogContentText>{this.props.text}</DialogContentText>
                             </Grid>
-                        </DialogContentText>
+                        </Grid>
                     </DialogContent>
                     <DialogActions>
                         <Button href={this.props.link} target="_blank" color="primary">
