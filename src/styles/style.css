@@ -2,9 +2,18 @@ h1 {
     font-size: 3rem;
     letter-spacing: -2px;
 }
-
+h4 {
+    font-size: 2rem;
+}
 img {
     max-width: 300px;
+}
+
+body {
+    background-color: #80808054;
+}
+.name {
+    font-family: 'Courgette', cursive;
 }
 .margin {
     margin: 3rem 2rem 3rem 2rem;
@@ -21,13 +30,18 @@ img {
 .content {
     max-width: 1260px;
     margin: auto;
-    padding-top: 7%;
-    padding-bottom: 3%;
+    padding: 7% 3rem 3% 3rem;
+    background-color: #ffffff;;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .gallery__item {
     transition: all .2s ease-in-out;
+    background-color: #80808054;
+    padding:  0.2rem;
 }
+
 .gallery__item:hover {
     transform: scale(1.2);
     cursor: pointer;
@@ -37,9 +51,19 @@ a, a:Visited {
     text-decoration: none;
     color: black;
 }
-
-.contact__informaton {
-    font-size: 1.2rem;
+.modal__image {
+    background-color: #80808054;
+    padding:  0.3rem;
+}
+.modal__text {
+    font-size: 1.5rem;
+    padding:  0.3rem;
+}
+.modal__header {
+    font-size: 2.5rem;
+}
+.fontLarger {
+    font-size: 1.5rem;
 }
 
 .section {
@@ -55,5 +79,10 @@ a, a:Visited {
 @media screen and (max-width: 400px) {
     Dialog {
         max-width: 320px;
+    }
+}
+@media screen and (max-width: 500px) {
+    h4 {
+        font-size: 1.3rem;
     }
 }

@@ -34,7 +34,7 @@ class ResponsiveDialog extends React.Component {
                 <a data-tip data-for='readMore' onClick={this.handleClickOpen}>
                     <div className="gallery__item">
                         {this.props.picture}
-                        <h3 className="divContainer__centered">{this.props.name}</h3>
+                        <h3 className="divContainer__centered fontLarger">{this.props.name}</h3>
                     </div>
                 </a>
                 <ReactTooltip id='readMore' place="top" type="light"
@@ -48,7 +48,7 @@ class ResponsiveDialog extends React.Component {
                     onClose={this.handleClose}
                 >
                     <DialogTitle>
-                        <div>
+                        <div className="modal__header">
                             <h3>{'Details about:'} <FaClose onClick={this.handleClose} style={closeImg}/> </h3>
                             <h3>{this.props.name}</h3>
                         </div>
@@ -59,7 +59,7 @@ class ResponsiveDialog extends React.Component {
                                 <a href={this.props.link} target="_blank">{this.props.picture}</a>
                             </Grid>
                             <Grid item xs={12} className="divContainer__centered">
-                                <DialogContentText>{this.props.text}</DialogContentText>
+                                <DialogContentText className="modal__text">{this.props.text}</DialogContentText>
                             </Grid>
                         </Grid>
                     </DialogContent>

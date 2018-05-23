@@ -25,7 +25,7 @@ class App extends Component {
                                 </div>
                                 <div className="divContainer__centered">
                                     <Typist.Delay ms={150}/>
-                                    <h1>Damian Wiśniewski</h1>
+                                    <h1 className="name">Damian Wiśniewski</h1>
                                 </div>
                             </Typist>
                         </div>
@@ -33,9 +33,9 @@ class App extends Component {
 
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <div>
-                            <h2>
-                                I’m looking for the work opportunity as a Frontend developer in
-                                <a data-tip data-for='global'> Tricity</a>.</h2>
+                            <p className="fontLarger"><strong>
+                                I’m looking for the work opportunity as a Web Developer in
+                                <a data-tip data-for='global'> Tricity</a>.</strong></p>
                             <ReactTooltip id='global' place="top" type="light" effect="float">
                                 <p>Gdynia, Sopot, Gdańsk</p>
                             </ReactTooltip>
@@ -69,7 +69,7 @@ class App extends Component {
                         <div className="divContainer__centered">
                             <ResponsiveDialog
                                 name="Beer app"
-                                picture={<img src={require('./img/beerapp.jpeg')} alt="Beer app thumbnail"/>}
+                                picture={<img className="modal__image" src={require('./img/beerapp.jpeg')} alt="Beer app thumbnail"/>}
                                 text="Hobby project with aim to search for the best beers.
                                       Website created with ReactJS, Redux, React-Router.
                                       Data received from open API, layout made with Material UI"
@@ -81,7 +81,7 @@ class App extends Component {
                         <div className="divContainer__centered">
                             <ResponsiveDialog
                                 name="Dreamers app"
-                                picture={<img src={require('./img/dreamersapp.jpeg')} alt="Dreamersapp thumbnail"/>}
+                                picture={<img className="modal__image" src={require('./img/dreamersapp.jpeg')} alt="Dreamersapp thumbnail"/>}
                                 text="Project was created during the course Frontend developer by team in which i managed workflow and project development.
                                       Website uses ReactJS, Redux, React-Router, Login functionality is connected to Firebase.
                                       Website receives it's events from free API and the design is based on Bootstrap."
@@ -93,7 +93,7 @@ class App extends Component {
                         <div className="divContainer__centered">
                             <ResponsiveDialog
                                 name="Noble Speakers Bureau"
-                                picture={<img src={require('./img/noblespeakers.jpeg')}
+                                picture={<img className="modal__image" src={require('./img/noblespeakers.jpeg')}
                                               alt="Noble speakers thumbnail"/>}
                                 text="Website created for the company Noble Speakers Bureau.
                                       I created website's functionality with JS, JQuery and pure PHP to receive data from SQL database."
@@ -105,7 +105,7 @@ class App extends Component {
                         <h1>Contact information:</h1>
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
-                        <p className="contact__informaton">If you want to know more about my projects, please feel free to contact me.</p>
+                        <p className="fontLarger">If you want to know more about my projects, please feel free to contact me.</p>
 
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
