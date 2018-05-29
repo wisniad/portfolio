@@ -5,10 +5,10 @@
 
 h1 {
     letter-spacing: -2px;
-    font-size: 4rem;
+    font-size: 3.8rem;
 }
 h2 {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
 }
 h4 {
     font-size: 3rem;
@@ -32,10 +32,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .heroHeader-content {
-    min-height: 500px;
+    min-height: 600px;
     color: #FFFFFF;
     margin-right: 20%;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
