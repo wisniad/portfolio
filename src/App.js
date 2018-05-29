@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import Grid from '@material-ui/core/Grid';
 import ReactTooltip from 'react-tooltip'
-import Typist from 'react-typist';
 import ResponsiveDialog from './components/ResponsiveDialog';
-import FaLinkedin from 'react-icons/lib/fa/linkedin'
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
 import FaGithub from 'react-icons/lib/fa/github';
-import MdMailOutline from 'react-icons/lib/md/mail-outline'
-// import HeroHeader from 'components/Header';
+import MdMailOutline from 'react-icons/lib/md/mail-outline';
 
 class App extends Component {
 
@@ -17,22 +15,10 @@ class App extends Component {
                 <header
                     className='heroHeader'>
                     <div className='heroHeader-content'>
-                        <Typist cursor={{show: false}}>
-                            <h1 className="">Hi!<Typist.Delay ms={500}/></h1>
-                            <h2 className=""> Welcome to my website.</h2>
-                            <Typist.Delay ms={300}/>
-                            <div className="divContainer__centered">
-                                <h2>My name is:</h2>
-                            </div>
-                            <div className="">
-                                <Typist.Delay ms={150}/>
-                                <h1 className="name">Damian Wiśniewski</h1>
-                            </div>
-                        </Typist>
                     </div>
                 </header>
 
-            <section >
+            <section>
                 <Grid  container className="content" justify="space-around" alignItems="center">
                     <Grid  item xs={12} sm={12} md={12} lg={6} xl={6}>
                         <img className="modal__image desk" src={require('./img/desk.jpg')} alt="Desk"/>
@@ -40,7 +26,9 @@ class App extends Component {
 
                     <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
                         <div>
+                            <h1>About me:</h1>
                             <p className="fontLarger"><strong>
+                                Hi! My name is Damian Wiśniewski.
                                 I’m looking for the work opportunity as a Web Developer in
                                 <a data-tip data-for='global'> Tricity</a>.</strong></p>
                             <ReactTooltip id='global' place="top" type="light" effect="float">
@@ -111,7 +99,7 @@ class App extends Component {
                         </div>
                     </Grid>
                 </Grid>
-                <Grid  container className="content" justify="space-around" alignItems="center">
+                <Grid  container className="content"  alignItems="center">
 
                 <Grid item xs={12} className="divContainer__centered">
                         <h1>Contact information:</h1>
