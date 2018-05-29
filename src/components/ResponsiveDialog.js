@@ -49,8 +49,8 @@ class ResponsiveDialog extends React.Component {
                 >
                     <DialogTitle>
                         <div className="modal__header">
-                            <h3>{'Details about:'} <FaClose onClick={this.handleClose} style={closeImg}/> </h3>
-                            <h3>{this.props.name}</h3>
+                            <h4>{'Details about:'} <FaClose onClick={this.handleClose} style={closeImg}/> </h4>
+                            <h2>{this.props.name}</h2>
                         </div>
                     </DialogTitle>
                     <DialogContent>
