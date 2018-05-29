@@ -1,10 +1,53 @@
+/* Just decorating stuff, nothing interesting to see here */
+
+
+
+
 h1 {
-    font-size: 3rem;
     letter-spacing: -2px;
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h4 {
+    font-size: 3rem;
 }
 
 img {
-    max-width: 300px;
+     max-width: 300px;
+ }
+
+body {
+    background-color: #80808054;
+    margin: 0;
+}
+.heroHeader {
+    background: url('../img/stock.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroHeader-content {
+    min-height: 500px;
+    color: #FFFFFF;
+    margin-right: 20%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.whiteShadow {
+    color: #1b1b1b;
+    text-shadow: -1px 0 #ebebeb, 0 1px #ebebeb, 1px 0 #ebebeb, 0 -1px #ebebeb;
+
+}
+.name {
+    font-family: 'Courgette', cursive;
 }
 .margin {
     margin: 3rem 2rem 3rem 2rem;
@@ -19,15 +62,19 @@ img {
 /*}*/
 
 .content {
-    max-width: 1260px;
-    margin: auto;
-    padding-top: 7%;
-    padding-bottom: 3%;
+    margin-top: 3%;
+    padding: 2% 10% 3% 10%;
+    background-color: #ffffff;;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .gallery__item {
     transition: all .2s ease-in-out;
+    background-color: #80808054;
+    padding:  0.2rem;
 }
+
 .gallery__item:hover {
     transform: scale(1.2);
     cursor: pointer;
@@ -37,9 +84,19 @@ a, a:Visited {
     text-decoration: none;
     color: black;
 }
-
-.contact__informaton {
-    font-size: 1.2rem;
+.modal__image {
+    background-color: #80808054;
+    padding:  0.3rem;
+}
+.modal__text {
+    font-size: 1.5rem;
+    padding:  0.3rem;
+}
+.modal__header {
+    font-size: 2.5rem;
+}
+.fontLarger {
+    font-size: 1.5rem;
 }
 
 .section {
@@ -52,8 +109,38 @@ a, a:Visited {
     padding-right: 10px;
     padding-left: 10px;
 }
+
+
+
+.desk {
+    max-width: 400px;
+}
 @media screen and (max-width: 400px) {
     Dialog {
         max-width: 320px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2.1rem;
+    }
+    h3 {
+        font-size: 1.7rem;
+    }
+    h4 {
+        font-size: 1.3rem;
+    }
+    .media__gridMargin {
+        margin-top: 20px;
+    }
+    .desk {
+        display: none
+    }
+    .heroHeader-content {
+        margin-right: 5%;
+        margin-left: 5%;
     }
 }

@@ -6,36 +6,43 @@ import ResponsiveDialog from './components/ResponsiveDialog';
 import FaLinkedin from 'react-icons/lib/fa/linkedin'
 import FaGithub from 'react-icons/lib/fa/github';
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
+// import HeroHeader from 'components/Header';
 
 class App extends Component {
 
     render() {
 
         return (
-            <div className="content">
-                <Grid container justify="space-around" alignItems="center">
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <div className="section__intro">
-                            <Typist cursor={{show: false}}>
-                                <h1 className="divContainer__centered">Hi!<Typist.Delay ms={500}/></h1>
-                                <h2 className="divContainer__centered"> Welcome to my website.</h2>
-                                <Typist.Delay ms={300}/>
-                                <div className="divContainer__centered ">
-                                    <h2>My name is:</h2>
-                                </div>
-                                <div className="divContainer__centered">
-                                    <Typist.Delay ms={150}/>
-                                    <h1>Damian Wiśniewski</h1>
-                                </div>
-                            </Typist>
-                        </div>
+            <div>
+                <header
+                    className='heroHeader'>
+                    <div className='heroHeader-content'>
+                        <Typist cursor={{show: false}}>
+                            <h1 className="">Hi!<Typist.Delay ms={500}/></h1>
+                            <h2 className=""> Welcome to my website.</h2>
+                            <Typist.Delay ms={300}/>
+                            <div className="divContainer__centered">
+                                <h2>My name is:</h2>
+                            </div>
+                            <div className="">
+                                <Typist.Delay ms={150}/>
+                                <h1 className="name">Damian Wiśniewski</h1>
+                            </div>
+                        </Typist>
+                    </div>
+                </header>
+
+            <section >
+                <Grid  container className="content" justify="space-around" alignItems="center">
+                    <Grid  item xs={12} sm={12} md={12} lg={6} xl={6}>
+                        <img className="modal__image desk" src={require('./img/desk.jpg')} alt="Desk"/>
                     </Grid>
 
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                    <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
                         <div>
-                            <h2>
-                                I’m looking for the work opportunity as a Frontend developer in
-                                <a data-tip data-for='global'> Tricity</a>.</h2>
+                            <p className="fontLarger"><strong>
+                                I’m looking for the work opportunity as a Web Developer in
+                                <a data-tip data-for='global'> Tricity</a>.</strong></p>
                             <ReactTooltip id='global' place="top" type="light" effect="float">
                                 <p>Gdynia, Sopot, Gdańsk</p>
                             </ReactTooltip>
@@ -61,15 +68,17 @@ class App extends Component {
                             </p>
                         </div>
                     </Grid>
+                </Grid>
+                <Grid  container className="content" justify="space-around" alignItems="center">
 
-                    <Grid item xs={12} sm={12} className="divContainer__centered section">
+                <Grid item xs={12} sm={12} className="divContainer__centered">
                         <h1>My projects:</h1>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
-                        <div className="divContainer__centered">
+                        <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Beer app"
-                                picture={<img src={require('./img/beerapp.jpeg')} alt="Beer app thumbnail"/>}
+                                picture={<img className="modal__image" src={require('./img/beerapp.jpeg')} alt="Beer app thumbnail"/>}
                                 text="Hobby project with aim to search for the best beers.
                                       Website created with ReactJS, Redux, React-Router.
                                       Data received from open API, layout made with Material UI"
@@ -78,10 +87,10 @@ class App extends Component {
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
-                        <div className="divContainer__centered">
+                        <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Dreamers app"
-                                picture={<img src={require('./img/dreamersapp.jpeg')} alt="Dreamersapp thumbnail"/>}
+                                picture={<img className="modal__image" src={require('./img/dreamersapp.jpeg')} alt="Dreamersapp thumbnail"/>}
                                 text="Project was created during the course Frontend developer by team in which i managed workflow and project development.
                                       Website uses ReactJS, Redux, React-Router, Login functionality is connected to Firebase.
                                       Website receives it's events from free API and the design is based on Bootstrap."
@@ -90,10 +99,10 @@ class App extends Component {
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} lg={3} xl={3}>
-                        <div className="divContainer__centered">
+                        <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Noble Speakers Bureau"
-                                picture={<img src={require('./img/noblespeakers.jpeg')}
+                                picture={<img className="modal__image" src={require('./img/noblespeakers.jpeg')}
                                               alt="Noble speakers thumbnail"/>}
                                 text="Website created for the company Noble Speakers Bureau.
                                       I created website's functionality with JS, JQuery and pure PHP to receive data from SQL database."
@@ -101,11 +110,14 @@ class App extends Component {
                             />
                         </div>
                     </Grid>
-                    <Grid item xs={12} className="divContainer__centered section">
+                </Grid>
+                <Grid  container className="content" justify="space-around" alignItems="center">
+
+                <Grid item xs={12} className="divContainer__centered">
                         <h1>Contact information:</h1>
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
-                        <p className="contact__informaton">If you want to know more about my projects, please feel free to contact me.</p>
+                        <p className="fontLarger">If you want to know more about my projects, please feel free to contact me.</p>
 
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
@@ -137,6 +149,7 @@ class App extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
+            </section>
             </div>
         );
     }
