@@ -6,32 +6,39 @@ import ResponsiveDialog from './components/ResponsiveDialog';
 import FaLinkedin from 'react-icons/lib/fa/linkedin'
 import FaGithub from 'react-icons/lib/fa/github';
 import MdMailOutline from 'react-icons/lib/md/mail-outline'
+// import HeroHeader from 'components/Header';
 
 class App extends Component {
 
     render() {
 
         return (
-            <div className="content">
-                <Grid container justify="space-around" alignItems="center">
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <div className="section__intro">
-                            <Typist cursor={{show: false}}>
-                                <h1 className="divContainer__centered">Hi!<Typist.Delay ms={500}/></h1>
-                                <h2 className="divContainer__centered"> Welcome to my website.</h2>
-                                <Typist.Delay ms={300}/>
-                                <div className="divContainer__centered ">
-                                    <h2>My name is:</h2>
-                                </div>
-                                <div className="divContainer__centered">
-                                    <Typist.Delay ms={150}/>
-                                    <h1 className="name">Damian Wiśniewski</h1>
-                                </div>
-                            </Typist>
-                        </div>
+            <div>
+                <header
+                    className='heroHeader'>
+                    <div className='heroHeader-content'>
+                        <Typist cursor={{show: false}}>
+                            <h1 className="">Hi!<Typist.Delay ms={500}/></h1>
+                            <h2 className=""> Welcome to my website.</h2>
+                            <Typist.Delay ms={300}/>
+                            <div className="divContainer__centered">
+                                <h2>My name is:</h2>
+                            </div>
+                            <div className="">
+                                <Typist.Delay ms={150}/>
+                                <h1 className="name">Damian Wiśniewski</h1>
+                            </div>
+                        </Typist>
+                    </div>
+                </header>
+
+            <section >
+                <Grid  container className="content" justify="space-around" alignItems="center">
+                    <Grid  item xs={12} sm={12} md={12} lg={6} xl={6}>
+                        <img className="modal__image desk" src={require('./img/desk.jpg')} alt="Desk"/>
                     </Grid>
 
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                    <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
                         <div>
                             <p className="fontLarger"><strong>
                                 I’m looking for the work opportunity as a Web Developer in
@@ -61,12 +68,14 @@ class App extends Component {
                             </p>
                         </div>
                     </Grid>
+                </Grid>
+                <Grid  container className="content" justify="space-around" alignItems="center">
 
-                    <Grid item xs={12} sm={12} className="divContainer__centered section">
+                <Grid item xs={12} sm={12} className="divContainer__centered">
                         <h1>My projects:</h1>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
-                        <div className="divContainer__centered">
+                        <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Beer app"
                                 picture={<img className="modal__image" src={require('./img/beerapp.jpeg')} alt="Beer app thumbnail"/>}
@@ -78,7 +87,7 @@ class App extends Component {
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
-                        <div className="divContainer__centered">
+                        <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Dreamers app"
                                 picture={<img className="modal__image" src={require('./img/dreamersapp.jpeg')} alt="Dreamersapp thumbnail"/>}
@@ -90,7 +99,7 @@ class App extends Component {
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={12} md={7} lg={3} xl={3}>
-                        <div className="divContainer__centered">
+                        <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Noble Speakers Bureau"
                                 picture={<img className="modal__image" src={require('./img/noblespeakers.jpeg')}
@@ -101,7 +110,10 @@ class App extends Component {
                             />
                         </div>
                     </Grid>
-                    <Grid item xs={12} className="divContainer__centered section">
+                </Grid>
+                <Grid  container className="content" justify="space-around" alignItems="center">
+
+                <Grid item xs={12} className="divContainer__centered">
                         <h1>Contact information:</h1>
                     </Grid>
                     <Grid item xs={12} className="divContainer__centered">
@@ -137,6 +149,7 @@ class App extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
+            </section>
             </div>
         );
     }

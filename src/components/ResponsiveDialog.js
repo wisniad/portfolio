@@ -34,7 +34,7 @@ class ResponsiveDialog extends React.Component {
                 <a data-tip data-for='readMore' onClick={this.handleClickOpen}>
                     <div className="gallery__item">
                         {this.props.picture}
-                        <h3 className="divContainer__centered fontLarger">{this.props.name}</h3>
+                        <h2 className="divContainer__centered fontLarger whiteShadow">{this.props.name}</h2>
                     </div>
                 </a>
                 <ReactTooltip id='readMore' place="top" type="light"
