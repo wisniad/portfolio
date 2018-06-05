@@ -62,7 +62,7 @@ class App extends Component {
                 <Grid item xs={12} sm={12} className="divContainer__centered">
                         <h1>My projects:</h1>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
+                    <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                         <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Beer app"
@@ -74,7 +74,18 @@ class App extends Component {
                             />
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
+                    <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
+                        <div className="divContainer__centered media__gridMargin">
+                            <ResponsiveDialog
+                                name="Vue search gallery"
+                                picture={<img className="modal__image" src={require('./img/galleryapp.jpg')} alt="Gallery thumbnail"/>}
+                                text="Vue application to functionality to search for images in external api.
+                                      Application stack: Vue, Vuex, Bootstrap"
+                                link="http://wisniewskidamian.pl/projects/index.html"
+                            />
+                        </div>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                         <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Dreamers app"
@@ -86,7 +97,7 @@ class App extends Component {
                             />
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={7} lg={3} xl={3}>
+                    <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                         <div className="divContainer__centered media__gridMargin">
                             <ResponsiveDialog
                                 name="Noble Speakers Bureau"
