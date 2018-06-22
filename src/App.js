@@ -97,7 +97,7 @@ class App extends Component {
                             <div className="divContainer__centered media__gridMargin">
                                 <ResponsiveDialog
                                     name="Vue sort app"
-                                    picture={<img className="modal__image" src={require('./img/sortapp.jpg')}
+                                    picture={<img className="modal__image" src={require('./img/sortapp.jpeg')}
                                                   alt="Gallery thumbnail"/>}
                                     text="Vue application with functionality to get json data from external api.
                                       Sorting functionality applied, layout with Bootstrap"
