@@ -30,9 +30,9 @@ class App extends Component {
                                 <p className="fontLarger"><strong>
                                     Hi! My name is Damian Wiśniewski.
                                     I’m looking for the work opportunity as a Web Developer in
-                                    <a data-tip data-for='global'> Tricity</a>.</strong></p>
+                                    <a data-tip data-for='global'> Europe</a>.</strong></p>
                                 <ReactTooltip id='global' place="top" type="light" effect="float">
-                                    <p>Gdynia, Sopot, Gdańsk</p>
+                                    <p>Best if: Poland (Gdańsk, Poznań, Warsaw), Sweden (Gothenburg, Boras)</p>
                                 </ReactTooltip>
                                 <p>
                                     I'm constantly learning and improving my development skills.
@@ -66,7 +66,32 @@ class App extends Component {
                     <Grid container className="content" justify="space-around" alignItems="center">
 
                         <Grid item xs={12} sm={12} className="divContainer__centered">
-                            <h1>My projects:</h1>
+                            <h1>My <a href="https://github.com/wisniad"><u>projects</u></a>:</h1>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
+                            <div className="divContainer__centered media__gridMargin">
+                                <ResponsiveDialog
+                                    name="Airport Search App"
+                                    picture={<img className="modal__image" src={require('./img/airportapp.jpeg')}
+                                                  alt="Airport Search app thumbnail"/>}
+                                    text="App used to search airport database and to check if the airports are based in countries where law
+                                    EC261 applies. Law used against airlines to claim compansation. For more info about compensations visit www.airhelp.com"
+                                    link="http://wisniewskidamian.pl/projects/airsearch/index.html"
+                                />
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
+                            <div className="divContainer__centered media__gridMargin">
+                                <ResponsiveDialog
+                                    name="Wallet app"
+                                    picture={<img className="modal__image" src={require('./img/walletapp.jpeg')}
+                                                  alt="Wallet app thumbnail"/>}
+                                    text="Recruitment project of a wallet. 
+                                    Based on Vue.
+                                    Instruction how to start it, is on github"
+                                    link="https://github.com/wisniad/wallet-recruitment"
+                                />
+                            </div>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                             <div className="divContainer__centered media__gridMargin">
